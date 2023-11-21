@@ -69,7 +69,8 @@ function destapar(id){
                 let url = 'juego-memoria\index.html';
                 mensaje.innerHTML = `<h2>FELICIDADES GANASTE!!</h2>`
                 +`<p>Duración total: ${tiempoInicial-tiempo} segundos</p>`
-                +`<p>Total Movimientos: ${movimientos}</p>`;
+                +`<p>Total Movimientos: ${movimientos}</p>`
+                +`<a href="../index.html">¿Quieres volver a jugar?</a>`;
                 mensaje.style.display = 'block';
 
                 winAudio.play();
