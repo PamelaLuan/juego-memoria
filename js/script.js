@@ -66,11 +66,9 @@ function destapar(id){
             if (aciertos == 8){
                 clearInterval(conteoRegresivo);
                 let mensaje = document.getElementById('mensaje');
-                let url = 'juego-memoria\index.html';
                 mensaje.innerHTML = `<h2>FELICIDADES GANASTE!!</h2>`
                 +`<p>Duración total: ${tiempoInicial-tiempo} segundos</p>`
-                +`<p>Total Movimientos: ${movimientos}</p>`
-                +`<a href="../index.html">¿Quieres volver a jugar?</a>`;
+                +`<p>Total Movimientos: ${movimientos}</p>`;
                 mensaje.style.display = 'block';
 
                 winAudio.play();
@@ -90,6 +88,10 @@ function destapar(id){
     }
 }
 
+function recargar() {
+    location.reload();
+}
+
 function iniciarConteo(){
     conteoRegresivo = setInterval(()=>{
         tiempo--;
@@ -98,10 +100,10 @@ function iniciarConteo(){
         if (tiempo == 0){
             clearInterval(conteoRegresivo);
             bloquearTarjetas();
-            let mensaje = document.getElementById('mensaje');
-            mensaje.innerHTML = `<h2>HAS PERDIDO</h2>`
-            +`<p>Te quedaste sin tiempo...</p>`
-            +`<a href="../index.html">¿Quieres volver a jugar?</a>`;
+            let mensaje = document.querySelector("#mensaje");
+            mensaje.innerHTML = `<h2>HAS PERDIDO!</h2>` + 
+                `<p>Te quedaste sin tiempo...<p>` + 
+                `<a href="index.html">¿Quieres volver a jugar?</a>`;
             mensaje.style.display = 'block';
 
             loseAudio.play();
