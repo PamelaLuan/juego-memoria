@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    color: white;
+    font-family: sans-serif;
+}
+
+main{
+    width: 350px;
+    margin: 70px auto 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    align-items: center;
+}
+
+.section-game{
+    background-color: rgba(255, 255, 255, .3);
+    padding: 20px 10px;
+    border-radius: 8px;
+}
+
+h1{
+    text-align: center;
+    text-shadow: 0 0 7px black;
+    margin-bottom: 15px;
+}
+
+
+button{
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+}
+button:hover{
+    cursor: pointer;
+}
+
+img{
+    width: 80%;
+}
+
+
+.statistics{
+    background-color: rgba(255, 255, 255, .5);
+    width: 80%;
+    padding: 10px 15px;
+    font-size: 0.7em;
+    line-height: 28px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: rgb(18, 89, 155);
+}
+.statistics__data{
+    border-bottom: 2px solid white;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.win-game{
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 15px;
+    width: 350px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    transition-property: width;
+    transition-duration: .5s;
+    position: absolute;
+    top: 90px;
+    display: none;
+}
+.win-game h2{
+    margin-bottom: 20px;
+}
+.win-game a{
+    color: rgb(189, 152, 194);
+    font-size: 1.3em;
+}
+.win-game a:hover{
+    text-shadow: 0 0 5px black;
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    color: black;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(18, 89, 155);
+}
+
+/* RESOLUCIONES */
+@media screen and (min-width: 480px) {
+    .win-game{
+        width: 420px;
+        transition-property: width;
+        transition-duration: .5s;
+    }
+    .win-game:hover{
+        width: 480px; 
+    }
+}
+
+@media screen and (min-width: 800px) {
+    main{
+        min-width: 690px;
+        flex-direction: row;
+        
+    }
+    h1{
+        font-size: 1.8em;
+    }
+    button{
+        width: 100px;
+        height: 100px;
+    }
+    .statistics{
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 8px;
+        font-size: 0.9em;
+        line-height: 70px;
+    }
+
+    .win-game{
+        width: 580px;
+        top: 10px;
+        left: 8%;
+    }
+    .win-game:hover{
+        width: 580px;
+    }
+}
